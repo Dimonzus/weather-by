@@ -41,13 +41,31 @@ export interface CurrentWeather {
   weather_code: number;
 }
 
+export interface DailyData {
+  time: string[];
+  weather_code: number[];
+  temperature_2m_max: number[];
+  temperature_2m_min: number[];
+  precipitation_sum: number[];
+  precipitation_probability_max: number[];
+  wind_speed_10m_max: number[];
+  wind_direction_10m_dominant: number[];
+  sunrise: string[];
+  sunset: string[];
+  moonrise: string[];
+  moonset: string[];
+}
+
 export interface WeatherResponse {
   latitude: number;
   longitude: number;
   timezone: string;
   current: CurrentWeather;
   hourly: HourlyWeather;
+  daily?: DailyData;
 }
+
+
 
 /* ========= Поиск городов (геокодинг) ========= */
 
@@ -81,6 +99,19 @@ export async function fetchWeather(lat: number, lon: number): Promise<WeatherRes
   const params = new URLSearchParams({
     latitude: lat.toString(),
     longitude: lon.toString(),
+    daily: [
+      'weather_code',
+      'temperature_2m_max',
+      'temperature_2m_min',
+      'precipitation_sum',
+      'precipitation_probability_max',
+      'wind_speed_10m_max',
+      'wind_direction_10m_dominant',
+      'sunrise',
+      'sunset',
+      'moonrise',
+      'moonset',
+    ].join(','),
     hourly: [
       'temperature_2m',
       'apparent_temperature',
@@ -100,7 +131,8 @@ export async function fetchWeather(lat: number, lon: number): Promise<WeatherRes
     timezone: 'auto',          // автоматически Europe/Minsk для РБ
     wind_speed_unit: 'ms',     // м/с — привычно для Беларуси
     precipitation_unit: 'mm',
-    forecast_hours: '48',      // ровно 48 часов от текущего момента
+    forecast_hours: '48',      // 48 часов почасового прогноза
+    forecast_days: '7',        // 7 дней суточного прогноза
   });
 
   const res = await fetch(`${WEATHER_BASE}/forecast?${params}`);
