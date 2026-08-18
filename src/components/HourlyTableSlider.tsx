@@ -260,7 +260,7 @@ function Row({ label, h, n, children }: { label: string; h: number; n: number; c
   return (
     <div className="flex border-b border-border last:border-b-0">
       <div
-        className="sticky left-0 z-10 flex shrink-0 items-center border-r border-border bg-bg-card px-3"
+        className="sticky left-0 z-10 hidden sm:flex shrink-0 items-center border-r border-border bg-bg-card px-3"
         style={{ width: LABEL_W, height: h }}
       >
         <span className="text-xs text-text-secondary">{label}</span>
