@@ -30,7 +30,7 @@ export default function Home() {
         {/* Шапка: лого + поиск + переключатель темы */}
         <header className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
           <h1 className="text-xl sm:text-2xl font-bold text-text-primary whitespace-nowrap">
-            🌤️ Погода.BY
+            🌤️ Погода Беларусь
           </h1>
           <div className="flex-1 w-full">
             <CitySearch onSelect={setCity} />
