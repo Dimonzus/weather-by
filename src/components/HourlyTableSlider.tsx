@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useRef, useCallback } from 'react';
+import { useMemo, useRef, useCallback, useState, useEffect } from 'react';
 import type { HourlyWeather, DailyData } from '@/lib/api/weather';
 import { WeatherIcon, WindArrow, getDirectionName } from './WeatherIcon';
 import { cn } from '@/lib/utils';
@@ -87,7 +87,11 @@ export function HourlyTableSlider({ hourly, daily, timezone }: Props) {
   const sunEvents = useMemo(() => buildEvents(daily, hourly.time, 'sun'), [daily, hourly.time]);
   const moonEvents = useMemo(() => buildEvents(daily, hourly.time, 'moon'), [daily, hourly.time]);
 
-  const nowIdx = hourly.time.findIndex((t) => new Date(t).getTime() >= Date.now());
+  const [nowIdx, setNowIdx] = useState(-1);
+
+  useEffect(() => {
+    setNowIdx(hourly.time.findIndex((t) => new Date(t).getTime() >= Date.now()));
+  }, [hourly.time]);
 
   const cellCls = (i: number) =>
     cn(
