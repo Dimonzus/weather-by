@@ -11,13 +11,13 @@ import type { CityResult } from '@/lib/api/weather';
 import { WeatherTableTabs } from '@/components/WeatherTableTabs';
 
 const DEFAULT_CITY: CityResult = {
-  id: 625144,
+  id: 628096,
   name: 'Гродно',
-  latitude: 53.6779,
-  longitude: 23.8295,
+  latitude: 53.62865,
+  longitude: 23.8942,
   country: 'Беларусь',
   admin1: 'Гродненская область',
-  timezone: 'Europe/Гродно',
+  timezone: 'Europe/Minsk',
 };
 
 export default function Home() {
