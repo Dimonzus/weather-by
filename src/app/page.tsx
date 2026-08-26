@@ -89,16 +89,19 @@ export default function Home() {
           </>
         )}
 
-        <footer className="mt-8 sm:mt-10 pb-6 text-center text-xs text-text-muted">
-          Данные:{' '}
-          <a
-            href="https://open-meteo.com/"
-            className="text-accent-blue hover:underline"
-            target="_blank"
-            rel="noopener"
-          >
-            Open-Meteo
-          </a>
+        <footer className="mt-8 sm:mt-10 pb-6 text-center text-xs text-text-muted space-y-1">
+          <div>
+            Данные:{' '}
+            <a
+              href="https://open-meteo.com/"
+              className="text-accent-blue hover:underline"
+              target="_blank"
+              rel="noopener"
+            >
+              Open-Meteo
+            </a>
+          </div>
+          <div>Copyright by DimaZ</div>
         </footer>
       </div>
     </main>
