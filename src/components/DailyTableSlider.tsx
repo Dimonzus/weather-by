@@ -185,8 +185,8 @@ export function DailyTableSlider({ daily, timezone }: Props) {
           <Row label="Напр. ветра" h={H.wdir} n={n}>
             {daily.wind_direction_10m_dominant.map((deg, i) => (
               <div key={i} className={cellCls(i)} style={{ width: COL_W, height: H.wdir }}>
-                <WindArrow direction={deg} size={26} />
-                <span className="mt-1 text-[11px] text-text-secondary">{getDirectionName(deg)}</span>
+                <WindArrow direction={deg} size={22} />
+                <span className="mt-1 text-[9px] leading-tight text-text-secondary text-center break-words">{getDirectionName(deg)}</span>
               </div>
             ))}
           </Row>

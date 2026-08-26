@@ -41,10 +41,10 @@ export function CurrentWeatherCard({ current }: Props) {
         <WeatherIcon code={current.weather_code} isDay={true} size={96} />
       </div>
 
-      <div className="grid grid-cols-2 gap-4 mt-6 pt-6 border-t border-border">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 pt-6 border-t border-border">
         <div>
           <div className="text-xs text-text-muted uppercase tracking-wide">Ветер</div>
-          <div className="text-base font-semibold text-text-primary">
+          <div className="text-sm sm:text-base font-semibold text-text-primary break-words">
             {current.wind_speed_10m.toFixed(1)} м/с, {getDirectionName(current.wind_direction_10m)}
           </div>
         </div>

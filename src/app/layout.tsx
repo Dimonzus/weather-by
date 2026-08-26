@@ -7,8 +7,11 @@ import { ThemeProvider } from "next-themes";
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
-  title: "Погода Беларусь — почасовой прогноз",
+  title: "Погода Беларусь — почасовой и недельный прогноз",
   description: "Точный прогноз погоды для городов Беларуси",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

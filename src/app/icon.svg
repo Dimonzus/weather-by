@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Солнце (за облаком) -->
+  <circle cx="26" cy="24" r="12" fill="#F5B731" stroke="#1A1A2E" stroke-width="3"/>
+  
+  <!-- Лучи солнца -->
+  <line x1="26" y1="4" x2="26" y2="9" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+  <line x1="26" y1="39" x2="26" y2="44" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+  <line x1="6" y1="24" x2="11" y2="24" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+  <line x1="41" y1="24" x2="46" y2="24" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+  <line x1="12" y1="10" x2="15.5" y2="13.5" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+  <line x1="36.5" y1="34.5" x2="40" y2="38" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+  <line x1="40" y1="10" x2="36.5" y2="13.5" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+  <line x1="15.5" y1="34.5" x2="12" y2="38" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Облако -->
+  <path d="M18 52 C10 52, 6 46, 10 40 C6 36, 10 28, 18 30 C20 22, 32 20, 36 26 C40 22, 52 24, 52 32 C58 32, 60 40, 54 44 C58 50, 52 56, 44 54 L18 54 Z" fill="#7DD3F0" stroke="#1A1A2E" stroke-width="3" stroke-linejoin="round"/>
+</svg>
